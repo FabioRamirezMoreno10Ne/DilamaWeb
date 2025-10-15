@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio Profesional</title>
+  <link rel="stylesheet" href="../css/InicioProfesional.css" />
+</head>
+<body>
+
+  <!-- 🔹 Encabezado con barra de búsqueda -->
+  <div class="encabezado">
+    <div class="busqueda">
+      <label for="buscar">Buscar:</label>
+      <input type="text" id="buscar" placeholder="Escribe algo..." />
+       <button id="btnBuscar">
+      <img src="../recursos/lupa.png" alt="Buscar" class="icono">
+    </button>
+    </div>
+    <img src="../Recursos/logoDilama.png" alt="Logo" class="logo" />
+  </div>
+
+  <!-- 🔹 Contenido principal -->
+  <div class="contenido">
+
+    <!-- 🔸 Listado de solicitudes -->
+    <div class="solicitudes">
+      <h2>Solicitudes Recibidas</h2>
+      <div id="listaSolicitudes"></div>
+    </div>
+
+    <!-- 🔸 Panel de información del profesional -->
+    <aside class="panelProfesional">
+      <img src="../Recursos/iconoUsuario.png" alt="Profesional" class="fotoProfesional" />
+      <p id="nombreProfesional"></p>
+      <p id="documentoProfesional"></p>
+      <p id="profesionProfesional"></p>
+      <p id="correoProfesional"></p>
+      <button id="btnCerrar">Cerrar sesión</button>
+    </aside>
+
+  </div>
+
+  <script src="../js/InicioProfesional.js"></script>
+</body>
+</html>

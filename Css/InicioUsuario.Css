@@ -1,0 +1,203 @@
+body {
+  background-color: #2b2828;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+.encabezado {
+  position: relative; /* Para posicionar elementos dentro */
+  display: flex;
+  align-items: center;
+  background-color: #42d8e8;
+  border-radius: 15px;
+  margin: 20px;
+  padding: 10px 25px;
+  width: 60%; /* ajusta el ancho del fondo azul */
+}
+
+.busqueda {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.busqueda label {
+  font-weight: bold;
+}
+
+.busqueda input,
+.busqueda select {
+  border: none;
+  border-radius: 10px;
+  padding: 6px 10px;
+  outline: none;
+}
+
+.icono {
+  background-color: #42d8e8;
+  width: 25px;
+  cursor: pointer;
+}
+
+#btnBuscar {
+  background-color: #42d8e8;
+  border: none;
+  cursor: pointer;
+
+}
+
+/* Aquí el truco */
+.logo {
+  margin: 1%;
+  position: absolute;
+  border-radius: 10px;
+  right: -50%; /* Mueve el logo hacia afuera del fondo azul */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 100px;
+  width: 180px;
+  
+}
+
+
+/* --- Contenido --- */
+.contenido {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* --- Tarjetas Profesionales --- */
+.profesionales {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 80%;
+}
+
+.card {
+  background-color: #42d8e8;
+  border-radius: 10px;
+  text-align: center;
+  width: 180px;
+  padding: 10px;
+}
+
+.card img {
+  width: 70px;
+  border-radius: 50%;
+}
+
+.card button {
+  background-color: #ffcc00;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* --- Panel Usuario --- */
+.panelUsuario {
+  background-color: #f2c94c;
+  color: black;
+  padding: 15px;
+  border-radius: 10px;
+  width: 15%;
+  text-align: center;
+}
+
+.fotoUsuario {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+#btnCerrar {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Contenedor del modal */
+.modal-contenido {
+  background-color: #FFD84D; /* Amarillo */
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.titulo-modal {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.label-modal {
+  display: block;
+  text-align: center;
+  margin: 10px auto 5px;
+  color: black;
+}
+
+/* Inputs */
+.modal-contenido input,
+.modal-contenido textarea {
+  width: 90%;
+  padding: 8px;
+  margin: 5px auto 15px;
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Botón principal */
+.btn-enviar {
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 90%;
+  font-size: 16px;
+}
+
+.btn-enviar:hover {
+  background-color: #333;
+}
+
+/* Botón cancelar */
+.btn-cerrar {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+@keyframes aparecer {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

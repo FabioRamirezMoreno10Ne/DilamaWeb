@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro de Usuario</title>
+  <link rel="stylesheet" href="../Css/RegistroUsuario.css" />
+</head>
+<body>
+  <div class="contenedor">
+    <div class="panel-izquierdo">
+      <h2>Foto:</h2>
+      <img id="fotoPerfil" src="../Recursos/iconoUsuario.png" alt="Foto de usuario" />
+      <button id="btnRegistrar">REGISTRAR</button>
+    </div>
+
+    <div class="panel-derecho">
+      <div class="campo">
+        <label>Nombre completo</label>
+        <input type="text" id="nombre" placeholder="Ej: Juan Pérez" />
+      </div>
+
+      <div class="campo">
+        <label>Correo</label>
+        <input type="email" id="correo" placeholder="Ej: juan@gmail.com" />
+      </div>
+
+      <div class="fila-documento">
+        <div class="campo">
+          <label>documento</label>
+          <input type="text" id="documento" placeholder="Ej: 123456789" />
+        </div>
+        <div class="campo tipo-doc">
+          <label>TIPO:</label>
+          <select id="tipoDocumento">
+            <option value="">Seleccione...</option>
+            <option value="CC">CC</option>
+            <option value="CE">CE</option>
+            <option value="NIT">NIT</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="campo">
+        <label>Contraseña</label>
+        <input type="password" id="contrasena" />
+      </div>
+
+      <div class="campo">
+        <label>Validar Contraseña</label>
+        <input type="password" id="confirmarContrasena" />
+      </div>
+
+      <button id="btnVolver" onclick="volver()">Volver</button>
+    </div>
+  </div>
+
+  <script src="../Js/RegistrarUsuario.js"></script>
+</body>
+</html>

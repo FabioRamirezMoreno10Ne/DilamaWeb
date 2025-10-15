@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DILAMA - Bienvenido</title>
+  <link rel="stylesheet" href="Css/index.Css">
+</head>
+<body>
+  <div class="container">
+    <h1>BIENVENIDO A DILAMA</h1>
+    <p class="p2">¿Con qué intención te piensas registrar?</p>
+
+    <div class="opciones">
+      <div class="tarjeta usuario" onclick="registrarUsuario()">
+        <img src="Recursos/iconoUsuario.png" alt="Usuario" class="icono">
+        <h2>Usuario común</h2>
+        <p>Persona que necesita un servicio de un profesional</p>
+      </div>
+
+      <div class="tarjeta profesional" onclick="registrarProfesional()">
+        <img src="Recursos/iconoProfesional.png" alt="Profesional" class="icono">
+        <h2>Profesional</h2>
+        <p>Persona que ofrece un servicio profesional</p>
+      </div>
+    </div>
+
+    <button class="boton-login" onclick="iniciarSesion()">Ya estoy registrado...</button>
+  </div>
+
+  <script>
+    function registrarUsuario() {
+      window.location.href = "html/RegistroUsuario.html";
+    }
+    function registrarProfesional() {
+      window.location.href = "html/RegistroProfesional.html";
+    }
+    function iniciarSesion() {
+      window.location.href = "html/IniciarSeccion.html";
+    }
+    
+     document.addEventListener("DOMContentLoaded", () => {
+    // Verificar si no hay datos y cargarlos automáticamente
+    if (!localStorage.getItem("profesionales") && !localStorage.getItem("usuarios")) {
+
+      const profesionalesBase = [
+        {
+          nombre: "Laura Gómez",
+          correo: "laura@a.com",
+          documento: "1001",
+          tipo: "CC",
+          profesion: "Abogacia",
+          contrasena: "123",
+          foto: "../recursos/iconoProfesional.png"
+        },
+        {
+          nombre: "Carlos Ruiz",
+          correo: "carlos@a.com",
+          documento: "1002",
+          tipo: "CC",
+          profesion: "Arquitectura",
+          contrasena: "123",
+          foto: "../recursos/iconoProfesional.png"
+        },
+        {
+          nombre: "Sofía Herrera",
+          correo: "sofia@a.com",
+          documento: "1003",
+          tipo: "CC",
+          profesion: "Psicologia",
+          contrasena: "123",
+          foto: "../recursos/iconoProfesional.png"
+        }
+      ];
+
+      const usuariosBase = [
+        {
+          nombre: "Juan Pérez",
+          correo: "juan@u.com",
+          documento: "2001",
+          tipo: "CC",
+          contrasena: "123"
+        },
+        {
+          nombre: "María Torres",
+          correo: "maria@u.com",
+          documento: "2002",
+          tipo: "CC",
+          contrasena: "123"
+        }
+      ];
+
+      localStorage.setItem("profesionales", JSON.stringify(profesionalesBase));
+      localStorage.setItem("usuarios", JSON.stringify(usuariosBase));
+
+   console.log();
+    } else {
+      console.log();
+    }
+  });
+  </script>
+</body>
+</html>

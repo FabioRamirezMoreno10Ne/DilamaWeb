@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio Usuario - DILAMA</title>
+  <link rel="stylesheet" href="../css/InicioUsuario.Css" />
+</head>
+<body>
+  <div class="encabezado">
+  <div class="busqueda">
+    <label for="buscar">Buscar:</label>
+    <input type="text" id="buscar" placeholder="Buscar profesional..." />
+    <button id="btnBuscar">
+      <img src="../recursos/lupa.png" alt="Buscar" class="icono">
+    </button>
+    <label for="filtro">Filtrar:</label>
+     <select id="filtro">
+      <option value="">Todas las profesiones</option>
+      <option value="Abogacia">Abogacía</option>
+      <option value="Arquitectura">Arquitectura</option>
+      <option value="Psicologia">Psicología</option>
+    </select>
+  </div>
+  <img src="../recursos/LogoDilama.png" alt="Logo DILAMA" class="logo" />
+</div>
+
+  
+
+  <main class="contenido">
+    <section id="listaProfesionales" class="profesionales"></section>
+
+    <aside class="panelUsuario" id="panelUsuario">
+      <h3>TU</h3>
+      <img src="../recursos/iconoUsuario.png" alt="usuario" class="fotoUsuario" />
+      <p id="nombreUsuario"></p>
+      <p id="documentoUsuario"></p>
+      <p id="correoUsuario"></p>
+      <button id="btnCerrar">Cerrar sesión</button>
+    </aside>
+  </main>
+
+  <!-- Modal para enviar solicitud -->
+<div id="modalSolicitud" class="modal">
+  <div class="modal-contenido">
+    <h2 class="titulo-modal">Solicitud:</h2>
+
+    <label class="label-modal">Usuario:</label>
+    <input type="text" id="nombreUsuario" placeholder="Nombre del usuario" readonly>
+
+    <label class="label-modal">Contacto:</label>
+    <input type="text" id="correoUsuario" placeholder="Correo de usuario" readonly>
+
+    <label class="label-modal">Razón:</label>
+    <textarea id="razon" placeholder="Explica por qué necesitas el servicio"></textarea>
+
+    <button id="enviarSolicitud" class="btn-enviar">Enviar solicitud</button>
+    <button id="cerrarModal" class="btn-enviar">Cancelar</button>
+  </div>
+</div>
+
+
+  <script src="../Js/InicioUsuario.Js"></script>
+</body>
+</html>
