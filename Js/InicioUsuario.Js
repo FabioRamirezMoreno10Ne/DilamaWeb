@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `
-      <img src=".../Recursos/iconoUsuario.png" alt="foto profesional" />
+      <img src="../Recursos/iconoUsuario.png" alt="foto profesional" />
       <p><strong>Nombre:</strong> ${prof.nombre}</p>
       <p><strong>Profesión:</strong> ${prof.profesion}</p>
       <button class="btn-solicitar" data-correo="${prof.correo}">Solicitar</button>
