@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.classList.add("card-solicitud");
       card.innerHTML = `
-        <img src="../Recursos/iconoUsuario.png" alt="Usuario" />
+        <img src=".../Recursos/iconoUsuario.png" alt="Usuario" />
         <div class="info-solicitud">
           <p><strong>De:</strong> ${sol.usuarioNombre}</p>
           <p><strong>Correo:</strong> ${sol.usuarioCorreo}</p>
